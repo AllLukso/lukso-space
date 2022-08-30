@@ -1,8 +1,8 @@
 {
-  "name": "WarAlpha Ship 2032",
-  "description": "A WarAlpha Upgradable Spaceship",
-  "external_url": "https://waralpha.io/assets/ships/2032.svg",
-  "image": "https://waralpha.io/assets/ships/2032.svg",
+  "name": "LuksoSpace Ship 2032",
+  "description": "A LuksoSpace Upgradable Spaceship",
+  "external_url": "https://luksospace.com/assets/ships/2032.svg",
+  "image": "https://luksospace.com/assets/ships/2032.svg",
   "attributes": [
     {
       "cabin": 2,

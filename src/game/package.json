@@ -1,5 +1,5 @@
 {
-  "name": "waralpha-game",
+  "name": "luksospace-game",
   "version": "1.0.0",
   "description": "Space shooter with upgradeable NFTs",
   "keywords": [],
@@ -13,6 +13,7 @@
     "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
+    "@erc725/erc725.js": "^0.14.4",
     "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
     "assert": "^2.0.0",
     "crypto-browserify": "^3.12.0",

@@ -28,12 +28,12 @@ export const connectWallet = async () => {
       method: 'wallet_addEthereumChain',
       params: [
         {
-          chainId: '0x13881',
-          rpcUrls: ['https://rpc-mumbai.maticvigil.com/'],
-          chainName: 'Polygon Mumbai',
+          chainId: '0xB0C',
+          rpcUrls: ['https://rpc.l16.lukso.network/'],
+          chainName: 'L16',
           nativeCurrency: {
-            name: 'MATIC',
-            symbol: 'MATIC',
+            name: 'LYXt',
+            symbol: 'LYXt',
             decimals: 16,
           },
           blockExplorerUrls: null,

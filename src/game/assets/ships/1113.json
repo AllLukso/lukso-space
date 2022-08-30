@@ -1,8 +1,8 @@
 {
-  "name": "WarAlpha Ship 1113",
-  "description": "A WarAlpha Upgradable Spaceship",
-  "external_url": "https://waralpha.io/assets/ships/1113.svg",
-  "image": "https://waralpha.io/assets/ships/1113.svg",
+  "name": "LuksoSpace Ship 1113",
+  "description": "A LuksoSpace Upgradable Spaceship",
+  "external_url": "https://luksospace.com/assets/ships/1113.svg",
+  "image": "https://luksospace.com/assets/ships/1113.svg",
   "attributes": [
     {
       "cabin": 1,

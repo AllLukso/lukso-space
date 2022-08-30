@@ -1,4 +1,4 @@
-# Phaser game for WarAlpha
+# Phaser game for LuksoSpace
 
 To start the game:
 
