@@ -38,7 +38,7 @@ const chainIds = {
   rinkeby: 4,
   "meter-testnet": 83,
   "theta-testnet": 365,
-  "xdc-testnet": 51
+  "lukso-testnet": 2828
 };
 
 function getChainConfig(chain: keyof typeof chainIds): NetworkUserConfig {
@@ -56,18 +56,20 @@ function getChainConfig(chain: keyof typeof chainIds): NetworkUserConfig {
     case "theta-testnet":
       jsonRpcUrl = "https://eth-rpc-api-testnet.thetatoken.org/rpc";
       break;
-    case "xdc-testnet":
-        jsonRpcUrl = "https://rpc.apothem.network";
+    case "lukso-testnet":
+        jsonRpcUrl = "https://rpc.l16.lukso.network";
         break;
     default:
       jsonRpcUrl = "https://" + chain + ".infura.io/v3/" + infuraApiKey;
   }
   return {
-    accounts: {
-      count: 10,
-      mnemonic,
-      path: "m/44'/60'/0'/0",
-    },
+    // accounts: {
+    //   count: 10,
+    //   mnemonic,
+    //   path: "m/44'/60'/0'/0",
+    // },
+    //@ts-ignore
+    accounts: [mnemonic],
     chainId: chainIds[chain],
     url: jsonRpcUrl,
   };
@@ -113,7 +115,7 @@ const config: HardhatUserConfig = {
     avalanche: getChainConfig("avalanche"),
     "meter-testnet": getChainConfig("meter-testnet"),
     "theta-testnet": getChainConfig("theta-testnet"),
-    "xdc-testnet": getChainConfig("xdc-testnet"),
+    "lukso-testnet": getChainConfig("lukso-testnet"),
     bsc: getChainConfig("bsc"),
     mainnet: getChainConfig("mainnet"),
     optimism: getChainConfig("optimism-mainnet"),

@@ -1,4 +1,4 @@
-# Solidity Contracts for War Alpha
+# Solidity Contracts for LuksoSpace
 
 Edit `.env` with your see phrase then:
 

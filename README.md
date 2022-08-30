@@ -4,7 +4,7 @@
 
 ### Demo: https://luksospace.com
 
-Lukso Space is a space shooter game on Polygon with upgradable NFT spaceships and a built-in DSL for you to create your own adventures! Let's first look into the game itself then the DSL.
+Lukso Space is a space shooter game on Lukso with upgradable NFT spaceships and a built-in DSL for you to create your own adventures! Let's first look into the game itself then the DSL.
 
 ## About the game
 
@@ -18,10 +18,10 @@ We have created an NFT collection of 256 unique spaceships made of a combination
 ![](https://luksospace.com/assets/screenshots/present-parts.png)
 ![](https://luksospace.com/assets/screenshots/present-possibilities.png)
 
-Make sure you have installed Metamask and connected it to the Polygon `Testnet`, then click "Connect your Wallet". Metamask will open to authorize the connection.
+Make sure you have installed the Universal Profile Extension and connected it to the Lukso `L16`, then click "Connect your Wallet". the Universal Profile Extension will open to authorize the connection.
 ![](https://luksospace.com/assets/bg-home.png)
 
-The game will then fetch all your spaceship NFTs from the smart contract. If you do not yet have an spaceship NFT, click "Mint New Ship" and Metamask will open to trigger the mint. You will receive a basic ship with entry-level weapons, wings, engine, and cabin. The ship will appear in your list of ships (if not refresh the page). Select that ship to access the game.
+The game will then fetch all your spaceship NFTs from the smart contract. If you do not yet have an spaceship NFT, click "Mint New Ship" and the Universal Profile Extension will open to trigger the mint. You will receive a basic ship with entry-level weapons, wings, engine, and cabin. The ship will appear in your list of ships (if not refresh the page). Select that ship to access the game.
 ![](https://luksospace.com/assets/screenshots/select-ship-2.png)
 
 You will see a little story at the beginning of every level with multiple choices. Depending on your response, this will display additional stories and/or trigger some effect. Effects can impact your health, thrust and weapon power, or those of your enemy. After the story, you will confront the enemy of the level.
@@ -29,7 +29,7 @@ You will see a little story at the beginning of every level with multiple choice
 The game is built with PhaserJS, a 2D Javascript game engine that allows you to pilot the ship and fire at enemies. Use the directional arrows to move the ship and press the space bar to fire. Try to kill the enemy ship, but be careful not to get hit. You have 30 health points then it's game over. Enemies have various health points depending on their level and your responses in the stories. When the enemy is destroyed, it drops some loot. Move your ship over it to get it into your inventory.
 ![](https://luksospace.com/assets/screenshots/level-2.png)
 
-Then open your inventory to see all the parts you have found. Drag and drop a ship part to its corresponding area on your ship to upgrade that part. An Polygon transaction opens that will actually modify your NFT metadata and image on-chain with the new part. [You can check an explorer to verify the transaction](https://mumbai.polygonscan.com/tx/0x742bf07e995faddfabc23262fe1ddce4b85c22eea46e753fc1298a30c58cd6d1).
+Then open your inventory to see all the parts you have found. Drag and drop a ship part to its corresponding area on your ship to upgrade that part. An Lukso transaction opens that will actually modify your NFT metadata and image on-chain with the new part. [You can check an explorer to verify the transaction](https://mumbai.Luksoscan.com/tx/0x742bf07e995faddfabc23262fe1ddce4b85c22eea46e753fc1298a30c58cd6d1).
 ![](https://luksospace.com/assets/screenshots/inventory.png)
 
 Each part are more or less powerfull. Some engines make you fater, some weapons deal more damages, ans so on.
