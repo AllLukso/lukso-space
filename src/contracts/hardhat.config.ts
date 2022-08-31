@@ -63,13 +63,13 @@ function getChainConfig(chain: keyof typeof chainIds): NetworkUserConfig {
       jsonRpcUrl = "https://" + chain + ".infura.io/v3/" + infuraApiKey;
   }
   return {
-    // accounts: {
-    //   count: 10,
-    //   mnemonic,
-    //   path: "m/44'/60'/0'/0",
-    // },
-    //@ts-ignore
-    accounts: [mnemonic],
+    accounts: {
+      count: 10,
+      mnemonic,
+      path: "m/44'/60'/0'/0",
+    },
+    // //@ts-ignore
+    // accounts: [mnemonic],
     chainId: chainIds[chain],
     url: jsonRpcUrl,
   };
