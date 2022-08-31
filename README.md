@@ -1,6 +1,6 @@
 ## Lukso Space
 
-### Demo Video:
+### Demo Video: https://youtu.be/BBCqkK7uF68
 
 ### Demo: https://luksospace.com
 
