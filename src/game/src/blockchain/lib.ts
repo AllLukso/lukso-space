@@ -1,6 +1,8 @@
 import { ethers } from 'ethers'
 import { ShipToken } from '../state/stateTypes'
 import { state } from '../state/state'
+// import UniversalProfile from "@lukso/universalprofile-smart-contracts/artifacts/UniversalProfile.json";
+
 const SpaceShipsAbi = require('./abi/SpaceShips.json')
 const SpaceCoinsAbi = require('./abi/SpaceCoins.json')
 
@@ -8,6 +10,8 @@ declare var window: any
 let provider: ethers.providers.Web3Provider
 let signer: ethers.providers.JsonRpcSigner
 let address: string
+let spaceShipsContract: ethers.Contract
+let spaceCoinsContract: ethers.Contract
 let spaceShipsContractWithSigner: ethers.Contract
 let spaceCoinsContractWithSigner: ethers.Contract
 
@@ -41,13 +45,18 @@ export const connectWallet = async () => {
       ],
     })
 
+    const accountsRequest: string[] = await provider.send(
+      'eth_requestAccounts',
+      [],
+    );
+
     signer = provider.getSigner()
     address = await signer.getAddress()
 
-    const spaceShipsContract = new ethers.Contract(state.spaceShipsContract, SpaceShipsAbi, provider)
+    spaceShipsContract = new ethers.Contract(state.spaceShipsContract, SpaceShipsAbi, provider)
     spaceShipsContractWithSigner = spaceShipsContract.connect(signer)
 
-    const spaceCoinsContract = new ethers.Contract(state.spaceCoinsContract, SpaceCoinsAbi, provider)
+    spaceCoinsContract = new ethers.Contract(state.spaceCoinsContract, SpaceCoinsAbi, provider)
     spaceCoinsContractWithSigner = spaceCoinsContract.connect(signer)
 
     console.log(address)
@@ -98,6 +107,16 @@ export const mintShip = async () => {
   const tx = await spaceShipsContractWithSigner.mintShip(address)
   const receipt = await tx.wait()
   console.log(receipt)
+
+  // const OPERATION_CALL = 0
+  // const targetPayload = spaceShipsContract.interface.encodeFunctionData('mintShip', [address])
+  // let abiPayload = myUp.interface.encodeFunctionData('execute', [
+  //   OPERATION_CALL,
+  //   spaceShipsContract.address,
+  //   0,
+  //   targetPayload,
+  // ])
+  // await myKeyManager.connect(upOwner).execute(abiPayload)
 }
 
 export const upgradeShip = async (ship: ShipToken) => {
